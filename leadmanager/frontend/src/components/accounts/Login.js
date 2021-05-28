@@ -33,12 +33,31 @@ export class Login extends Component {
                 style={{
                     backgroundImage:
                         "url('../../../static/images/loginbackground.jpg')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    position: "fixed",
+                    top: "0",
+                    left: "0",
+                    height: "100vh",
+                    width: "100vw"
                 }}
             >
-                <div className="col-md-6 m-auto">
+                <div className="col-md-6 m-auto" 
+                    style = {{
+                        position: "aboslute",
+                        left: "25%",
+                        top: "15%",
+                        
+                    }}>
                     <div className="card card-body mt-5">
+                        <img 
+                            src="../../../static/images/M.png"
+                            width="100"
+                            height="100"/>
                         <h2 className="text-center">Login</h2>
-                        <form onSubmit={this.onSubmit}>
+                        <form onSubmit={this.onSubmit} style = {{
+                            textAlign:"center",
+                        }}>
                             <div className="form-group">
                                 <label>Username</label>
                                 <input
@@ -65,6 +84,16 @@ export class Login extends Component {
                                 <button
                                     type="submit"
                                     className="btn btn-primary"
+                                    style={{
+                                        backgroundColor: "#FF3399",
+                                        width: "250px",
+                                        height: "45px",
+                                        borderRadius: "40px",
+                                        color: "black",
+                                        fontSize: "18px",
+                                        
+
+                                    }}
                                 >
                                     Login
                                 </button>
